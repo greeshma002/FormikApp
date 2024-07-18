@@ -1,0 +1,33 @@
+.view-container {
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 30px;
+    background-color: #27292c;
+    border: 1px solid #222831;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .view-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .data-container {
+    background-color: #2d2d2f;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .data-container p {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .data-container strong {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
