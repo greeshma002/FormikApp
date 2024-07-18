@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './View.css'; 
+import '../assets/View.css';
 
 const View = () => {
-    
+
     //state to manage formdata
   const [formData, setFormData] = useState(() => {
     // initialize formdata from localStorage if available or default values
