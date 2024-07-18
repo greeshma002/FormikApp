@@ -1,8 +1,24 @@
-# React + Vite
+# React Form and View Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple React application that demonstrates a form and a real-time view of the form data. The form is created using React and styled with CSS. The form data is stored in `localStorage` and displayed in real-time in a separate view component.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Form with fields for name and email
+- Real-time display of form data in a separate view component
+- Responsive design with custom styling
+
+## Technologies Used
+
+- React
+- CSS
+- Vite
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher recommended)
+- npm 
+
+
