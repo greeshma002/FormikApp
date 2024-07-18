@@ -2,21 +2,35 @@ import React, { useEffect, useState } from 'react';
 import '../assets/View.css';
 
 const View = () => {
-
-    //state to manage formdata
+  // state to manage formData
   const [formData, setFormData] = useState(() => {
-    // initialize formdata from localStorage if available or default values
+    // initialize formData from localStorage if available or default values
     const storedFormData = JSON.parse(localStorage.getItem('formData'));
     return storedFormData || { name: '', email: '' };
   });
 
-
-  // Effect to update formdata from localStorage on component mount
+  // Effect to update formData from localStorage on component mount
   useEffect(() => {
     const storedFormData = JSON.parse(localStorage.getItem('formData'));
     if (storedFormData) {
       setFormData(storedFormData);
     }
+
+    // Function to handle storage events
+    const handleStorageChange = (event) => {
+      if (event.key === 'formData') {
+        const newFormData = JSON.parse(event.newValue);
+        setFormData(newFormData);
+      }
+    };
+
+    // Add event listener for storage changes
+    window.addEventListener('storage', handleStorageChange);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
   }, []);
 
   return (

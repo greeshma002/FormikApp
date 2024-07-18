@@ -18,7 +18,12 @@ This project is a simple React application that demonstrates a form and a real-t
 
 ### Prerequisites
 
-- Node.js (v14 or higher recommended)
 - npm 
+
+### USAGE
+
+1.Open the form page at http://localhost:5173 and fill in your name and email.
+2.Click the "View Form Data" button to navigate to the view page (I did this for hosting with vercel).
+3.The view page at http://localhost:5173/view will display the form data in real-time as you type.
 
 

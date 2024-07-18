@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import Form from './components/Form';
-import View from './components/View';
 import './App.css'; 
 
 const App = () => {
@@ -9,23 +9,28 @@ const App = () => {
     return storedFormData || { name: '', email: '' };
   });
 
-  // function to handle form input changes and update localStorage
+  const navigate = useNavigate(); 
+
+  // Function to handle form input changes and update localStorage
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
-    // update localStorage with new form data
+    // Update localStorage with new form data
     localStorage.setItem('formData', JSON.stringify({ ...formData, [name]: value }));
+  };
+
+  // Function to handle button click and navigate to the view page
+  const handleViewClick = () => {
+    navigate('/view');
   };
 
   return (
     <div className="app-container">
       <h1>Fill the Form</h1>
-     
-        <Form formData={formData} onInputChange={handleInputChange} />
-      
+      <Form formData={formData} onInputChange={handleInputChange} onViewClick={handleViewClick} />
     </div>
   );
 };

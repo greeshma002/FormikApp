@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/Form.css';
 
-const Form = ({ formData, onInputChange }) => {
+const Form = ({ formData, onInputChange, onViewClick }) => {
   return (
     <form className="form-container">
       <label htmlFor="name">Name</label>
@@ -21,6 +21,10 @@ const Form = ({ formData, onInputChange }) => {
         value={formData.email}
         onChange={onInputChange}
       />
+      
+      <button type="button" className="view-button" onClick={onViewClick}>
+        View Form Data
+      </button>
     </form>
   );
 };
