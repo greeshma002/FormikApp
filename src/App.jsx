@@ -24,7 +24,7 @@ const App = () => {
 
   // Function to handle button click and navigate to the view page
   const handleViewClick = () => {
-    navigate('/view');
+    window.open('/view');
   };
 
   return (
